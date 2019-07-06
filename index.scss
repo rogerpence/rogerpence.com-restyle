@@ -3,141 +3,24 @@
 @import 'sass-components/vars';
 @import 'sass-components/reset';
 @import 'sass-components/utilities';
-// @import 'sass-components/diagnostics';
+@import 'sass-components/diagnostics';
+@import 'sass-components/general-mixins';
+@import 'sass-components/hamburger';
+
 
 * {
     font-family: 'Roboto', sans-serif;
 }
 
-@import 'sass-components/general-mixins';
 
 // Application parts
-@import 'sass-components/hamburger';
 
 body {
     background-color: $primary-bg-color;
 }
 
-header {
-    background-color: $secondary-bg-color;
-    display: grid;
-    grid-template-areas: 
-        "title  title"
-        "search search"
-        "tags    tags"
-        "links  links";  
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
-    justify-items: center;
 
-    .hamburger-container {
-        outline: none;
-        position: absolute;
-        left: 10px;
-        top: 16px;
-
-        a {
-            outline: none;
-            color: $primary-bg-color;
-        }        
-    }
-    
-    .blog-title {
-        padding: .4em 0 .1em 0;
-        font-size: 2.4em;
-    }    
-
-    .search-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        padding-top: .1em;
-        padding-bottom: .8em;
-        font-size: .9em;
-
-        a {
-            outline: none;
-        }
-
-        img {
-            margin-left: -16px;
-            cursor: pointer;
-        }
-          
-        input:focus {
-            font-size: 160%;
-        }          
-    }    
-
-    .links {
-        grid-area: links;
-        margin-top: .5em;
-        background-color: darken($secondary-bg-color, 20%);
-        justify-self: stretch;
-        overflow: hidden;
-        transition: height 500ms ease;
-        height: 0;
-
-        .inner-container {
-            padding-top: 16px;
-            display: grid;
-            grid-template-rows: auto;
-            align-items: center;    
-            justify-self: stretch;
-            border-top: 1px solid $primary-bg-color;
-
-            div {
-                @include flex-centered-elements;
-                justify-self: stretch;            
-            }
-
-            a {
-                @include flex-centered-elements(column);            
-                font-size: 1.2em;
-                color: black;
-                text-decoration: none;
-                padding-right: .8em;
-            }        
-
-            a:last-child {
-                padding-right: 0;
-            }
-        }        
-
-        .icon {
-            height: 2.3em;
-
-            &-xs {
-                @extend .icon;
-                width: 1.1rem;
-            }
-            &-s {
-                @extend .icon;
-                width: 1.3rem;
-            }
-            &-m {
-                @extend .icon;
-                width: 1.5rem;
-            }    
-        }
-    }        
-
-    .show-links {
-        height: 88px;
-    }
-    
-    .tags {
-        font-size: 1.1em;
-    }
-
-}
-
+@import 'sass-components/header-mobile';
 
 .blog-title {
     grid-area: title;
@@ -151,9 +34,35 @@ header {
     grid-area: tags 
 }
 
-.image {
-    grid-area: image;
+.avatar {
+    grid-area: avatar;
     display: none;
 }
 
+
+// 768 or more.
+@media only screen and (min-width: 768px) {
+    @import 'sass-components/header-desktop';
+
+    header .blog-title {
+        font-size: 2.8em;
+        // color: red;
+    }    
+
+    header .search-container {
+    }    
+
+    header .tags {
+        font-size: 1.4em;
+    }
+
+}    
+
+// 1024 or more
+@media only screen and (min-width: 1024px) {
+    @import 'sass-components/header-desktop';
+    header .blog-title {
+        // color: green;
+    }
+}    
 

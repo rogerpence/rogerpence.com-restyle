@@ -1,0 +1,119 @@
+
+header {
+    background-color: $secondary-bg-color;
+    display: grid;
+    grid-template-areas: 
+        "title  title"
+        "search search"
+        "tags    tags"
+        "links  links";  
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+
+    .hamburger-container {
+        outline: none;
+        position: absolute;
+        left: 10px;
+        top: 16px;
+
+        a {
+            outline: none;
+            color: $primary-bg-color;
+        }        
+    }
+    
+    .blog-title {
+        padding: .4em 0 .1em 0;
+        font-size: 2.4em;
+        color: lighten(black, 20%);
+    }    
+
+    .search-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding-top: .1em;
+        padding-bottom: .8em;
+        font-size: .9em;
+        color: lighten(black, 20%);
+
+        img {
+            margin-left: -16px;
+            cursor: pointer;
+        }
+          
+        input:focus {
+            font-size: 160%;
+        }          
+    }    
+
+    .links {
+        grid-area: links;
+        margin-top: .5em;
+        background-color: darken($secondary-bg-color, 20%);
+        justify-self: stretch;
+        overflow: hidden;
+        transition: height 500ms ease;
+        height: 0;
+        color: lighten(black, 20%);
+
+        .inner-container {
+            padding-top: 16px;
+            display: grid;
+            grid-template-rows: auto;
+            align-items: center;    
+            justify-self: stretch;
+            border-top: 1px solid $primary-bg-color;
+
+            div {
+                @include flex-centered-elements;
+                justify-self: stretch;            
+            }
+
+            a {
+                @include flex-centered-elements(column);            
+                font-size: 1.2em;
+                color: lighten(black, 20%);
+                text-decoration: none;
+                padding-right: .8em;
+            }        
+
+            a:last-child {
+                padding-right: 0;
+            }
+        }        
+
+        .icon-xs {
+            height: 2.3em;
+            width: 1.1rem;
+        }
+        .icon-s {
+            height: 2.3em;
+            width: 1.3rem;
+        }
+        .icon-m {
+            height: 2.3em;
+            width: 1.5rem;
+        }    
+    }        
+
+    .show-links {
+        height: 88px;
+    }
+    
+    .tags {
+        font-size: 1.1em;
+        padding-bottom: .5em;
+    }
+
+    .avatar {
+        display: none;
+    }
+}

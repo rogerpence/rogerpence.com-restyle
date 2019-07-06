@@ -1,0 +1,116 @@
+
+header {
+    background-color: $secondary-bg-color;
+    display: grid;
+    grid-template-areas: 
+        "avatar links links"
+        "avatar title search"
+        "tags tags tags";
+    grid-template-columns: auto repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, auto);
+
+    .hamburger-container {
+        display: none;
+    }
+    
+    .blog-title {
+        padding: 0;
+        font-size: 3.8em;
+        justify-self: start;
+        align-self: center;
+        color: lighten(black, 20%);
+    }    
+
+    .search-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        justify-self: end;
+        display: flex;
+        justify-items: flex-end;
+        align-items: center;
+        padding: .5em 1em 0 0;                
+        font-size: .9em;
+        color: lighten(black, 20%);
+
+        img {
+            margin-left: -16px;
+            cursor: pointer;
+        }
+          
+        input:focus {
+            font-size: 160%;
+        }          
+    }    
+
+    .links {
+        padding: 0;
+        grid-area: links;
+        justify-self: end;
+        overflow: hidden;
+        height: auto;
+        background-color: $secondary-bg-color;
+        color: lighten(black, 20%);
+
+        .inner-container {
+            padding-top: 2px;
+            padding-right: 1em;
+            display: grid;
+            grid-template-rows: auto;
+            align-items: center;    
+            justify-self: end;
+            border: none;
+
+            div {
+                @include flex-centered-elements;
+                justify-self: stretch;            
+            }
+
+            a {
+                @include flex-centered-elements(column);            
+                font-size: 1.2em;
+                color: lighten(black, 20%);
+                text-decoration: none;
+                padding-right: .8em;
+            }        
+
+            a:last-child {
+                padding-right: 0;
+            }
+        }        
+
+        .icon-xs {
+            height: 2.3em;
+            width: 1.1rem;
+        }
+        .icon-s {
+            height: 2.3em;
+            width: 1.3rem;
+        }
+        .icon-m {
+            height: 2.3em;
+            width: 1.5rem;
+        }    
+    }        
+
+    .show-links {
+        height: 88px;
+    }
+    
+    .tags {
+        font-size: 1.6em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        color: lighten(black, 20%);
+    }
+
+    .avatar {
+        padding-left: 1em;
+        padding-top: 1.3em;
+        padding-right: 2em;
+        align-self: end;
+        display: block;
+        img {
+            border-radius: 50%;
+        }            
+    }
+}
