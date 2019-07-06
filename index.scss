@@ -3,7 +3,7 @@
 @import 'sass-components/vars';
 @import 'sass-components/reset';
 @import 'sass-components/utilities';
-@import 'sass-components/diagnostics';
+// @import 'sass-components/diagnostics';
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -35,16 +35,16 @@ header {
         position: absolute;
         left: 10px;
         top: 16px;
+
+        a {
+            outline: none;
+            color: $primary-bg-color;
+        }        
     }
     
-    .hamburger-container a {
-        outline: none;
-        color: #514b5b;
-    }    
-
     .blog-title {
-        padding: .4em 0;
-        font-size: 2.2em;
+        padding: .4em 0 .1em 0;
+        font-size: 2.4em;
     }    
 
     .search-container {
@@ -57,9 +57,13 @@ header {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        padding-top: 2px;
-        padding-bottom: 2px;
+        padding-top: .1em;
+        padding-bottom: .8em;
         font-size: .9em;
+
+        a {
+            outline: none;
+        }
 
         img {
             margin-left: -16px;
@@ -70,33 +74,70 @@ header {
             font-size: 160%;
         }          
     }    
-}
 
-.links {
-    grid-area: links;
-    @include flex-centered-elements;
-    margin-top: .5em;
-    padding-bottom: .2em;
-    font-size: 1.2em;
-    background-color: #919191;
-    justify-self: stretch;
+    .links {
+        grid-area: links;
+        margin-top: .5em;
+        background-color: darken($secondary-bg-color, 20%);
+        justify-self: stretch;
+        overflow: hidden;
+        transition: height 500ms ease;
+        height: 0;
 
-    .inner-container {
-        padding-top: 10px;
-        display: grid;
-        grid-template-rows: auto;
-        align-items: center;    
+        .inner-container {
+            padding-top: 16px;
+            display: grid;
+            grid-template-rows: auto;
+            align-items: center;    
+            justify-self: stretch;
+            border-top: 1px solid $primary-bg-color;
 
-        a {
-            @include flex-centered-elements(column);
-            
-            font-size: .8em;
-            color: black;
-            text-decoration: none;
-            padding-right: 1em;
+            div {
+                @include flex-centered-elements;
+                justify-self: stretch;            
+            }
+
+            a {
+                @include flex-centered-elements(column);            
+                font-size: 1.2em;
+                color: black;
+                text-decoration: none;
+                padding-right: .8em;
+            }        
+
+            a:last-child {
+                padding-right: 0;
+            }
         }        
+
+        .icon {
+            height: 2.3em;
+
+            &-xs {
+                @extend .icon;
+                width: 1.1rem;
+            }
+            &-s {
+                @extend .icon;
+                width: 1.3rem;
+            }
+            &-m {
+                @extend .icon;
+                width: 1.5rem;
+            }    
+        }
     }        
+
+    .show-links {
+        height: 88px;
+    }
+    
+    .tags {
+        font-size: 1.1em;
+    }
+
 }
+
 
 .blog-title {
     grid-area: title;
@@ -111,8 +152,8 @@ header {
 }
 
 .image {
-    display: none;
     grid-area: image;
+    display: none;
 }
 
 
