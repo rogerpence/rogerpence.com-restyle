@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/index.css">
+</head>
+<body>
+
+    <header class="container">
+        <div class="hamburger-container">
+            <a href="#" data-events="click" 
+                        data-handlers="toggleNavMenu">
+                <div class="hamburger hamburger--slider">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="image">
+            <img class="avatar round-full" width="80"
+                src="https://rogerpence.com/storage/images/rp-small.2458154.32926.png?1" alt="Roger Pence">
+        </div>
+        
+        <div class="links red-o-s">
+            <div class="inner-container">
+                <div class="links">
+                    <a class="" href="/about">
+                        <img class="w-5" src="/images/address-card-regular.svg" alt="">&nbsp;About</a>
+                    <a class="" href="/contact">
+                        <img class="w-5" src="/images/handshake-alt-regular.svg" alt="">&nbsp;Contact</a>
+                    <a class="" href="/links">
+                        <img class="w-4" src="/images/link-regular.svg" alt="">&nbsp;Links</a>
+                    <a class="" href="/snippets">
+                        <img class="w-5" src="/images/code-regular.svg" alt="">&nbsp;Snippets</a>
+                    <a class="" href="/">
+                        <img class="w-5" src="/images/sign-in-solid.svg" alt="">&nbsp;Login</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-title">rogerpence.com</div>
+
+        <div class="search-container">
+            <input id="search-input" type="text">
+            <img id="mag-glass" width="40px" height="40px"
+                src="https://www.rogerpence.com/storage/images/Frame.2458646.78279.png" alt="">
+        </div>
+
+        <div class="tags">Write &bullet; Speak &bullet; Teach &bullet; Develop &bullet; Manage</div>
+    </header>
+
+    <script src="./auto-bind-events.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

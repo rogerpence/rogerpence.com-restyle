@@ -1,0 +1,7 @@
+@mixin flex-centered-elements($direction: row) {
+    /* Center row elements with flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}    

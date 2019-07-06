@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@import 'sass-components/vars';
+@import 'sass-components/reset';
+@import 'sass-components/utilities';
+@import 'sass-components/diagnostics';
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+@import 'sass-components/general-mixins';
+
+// Application parts
+@import 'sass-components/hamburger';
+
+body {
+    background-color: $primary-bg-color;
+}
+
+header {
+    background-color: $secondary-bg-color;
+    display: grid;
+    grid-template-areas: 
+        "title  title"
+        "search search"
+        "tags    tags"
+        "links  links";  
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+
+    .hamburger-container {
+        outline: none;
+        position: absolute;
+        left: 10px;
+        top: 16px;
+    }
+    
+    .hamburger-container a {
+        outline: none;
+        color: #514b5b;
+    }    
+
+    .blog-title {
+        padding: .4em 0;
+        font-size: 2.2em;
+    }    
+
+    .search-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        font-size: .9em;
+
+        img {
+            margin-left: -16px;
+            cursor: pointer;
+        }
+          
+        input:focus {
+            font-size: 160%;
+        }          
+    }    
+}
+
+.links {
+    grid-area: links;
+    @include flex-centered-elements;
+    margin-top: .5em;
+    padding-bottom: .2em;
+    font-size: 1.2em;
+    background-color: #919191;
+    justify-self: stretch;
+
+    .inner-container {
+        padding-top: 10px;
+        display: grid;
+        grid-template-rows: auto;
+        align-items: center;    
+
+        a {
+            @include flex-centered-elements(column);
+            
+            font-size: .8em;
+            color: black;
+            text-decoration: none;
+            padding-right: 1em;
+        }        
+    }        
+}
+
+.blog-title {
+    grid-area: title;
+}
+
+.search-container {
+    grid-area: search;
+}
+
+.tags {
+    grid-area: tags 
+}
+
+.image {
+    display: none;
+    grid-area: image;
+}
+
+
