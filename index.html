@@ -9,54 +9,56 @@
 </head>
 <body>
 
-    <header class="container">
-        <div class="hamburger-container">
-            <a href="#" data-events="click" 
-                        data-handlers="toggleNavMenu">
-                <div class="hamburger hamburger--slider">
-                    <div class="hamburger-box">
-                        <div class="hamburger-inner"></div>
+    <div class="header-wrapper">
+        <header class="container">
+            <div class="hamburger-container">
+                <a href="#" data-events="click" 
+                            data-handlers="toggleNavMenu">
+                    <div class="hamburger hamburger--slider">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="avatar">
+                <img class="round-full" width="80"
+                    src="https://rogerpence.com/storage/images/rp-small.2458154.32926.png?1" alt="Roger Pence">
+            </div>
+            
+            <div class="links">
+                <div class="inner-container">
+                    <div>
+                        <a class="" href="/about">
+                            <img class="icon-s" src="/images/address-card-regular.svg" alt="">&nbsp;About</a>
+                        <a class="" href="/contact">
+                            <img class="icon-m" src="/images/handshake-alt-regular.svg" alt="">&nbsp;Contact</a>
+                        <a class="" href="/links">
+                            <img class="icon-xs" src="/images/link-regular.svg" alt="">&nbsp;Links</a>
+                        <a class="" href="/snippets">
+                            <img class="icon-s" src="/images/code-regular.svg" alt="">&nbsp;Snippets</a>
+                        <a class="" href="/">
+                            <img class="icon-s" src="/images/sign-in-solid.svg" alt="">&nbsp;Login</a>
                     </div>
                 </div>
-            </a>
-        </div>
-
-        <div class="avatar">
-            <img class="round-full" width="80"
-                src="https://rogerpence.com/storage/images/rp-small.2458154.32926.png?1" alt="Roger Pence">
-        </div>
-        
-        <div class="links">
-            <div class="inner-container">
-                <div>
-                    <a class="" href="/about">
-                        <img class="icon-s" src="/images/address-card-regular.svg" alt="">&nbsp;About</a>
-                    <a class="" href="/contact">
-                        <img class="icon-m" src="/images/handshake-alt-regular.svg" alt="">&nbsp;Contact</a>
-                    <a class="" href="/links">
-                        <img class="icon-xs" src="/images/link-regular.svg" alt="">&nbsp;Links</a>
-                    <a class="" href="/snippets">
-                        <img class="icon-s" src="/images/code-regular.svg" alt="">&nbsp;Snippets</a>
-                    <a class="" href="/">
-                        <img class="icon-s" src="/images/sign-in-solid.svg" alt="">&nbsp;Login</a>
-                </div>
             </div>
-        </div>
-        
-        <div class="blog-title">rogerpence.com</div>
+            
+            <div class="blog-title">rogerpence.com</div>
 
-        <div class="search-container">
-            <input id="search-input" type="text">
-            <a href="#"
-               data-events="click"
-               data-handlers="performSearch">
-                <img id="mag-glass" width="40px" height="40px"
-                     src="https://www.rogerpence.com/storage/images/Frame.2458646.78279.png" alt="">
-            </a>                
-        </div>
+            <div class="search-container">
+                <input id="search-input" type="text">
+                <a href="#"
+                data-events="click"
+                data-handlers="performSearch">
+                    <img id="mag-glass" width="40px" height="40px"
+                        src="https://www.rogerpence.com/storage/images/Frame.2458646.78279.png" alt="">
+                </a>                
+            </div>
 
-        <div class="tags">Write &bullet; Speak &bullet; Teach &bullet; Develop &bullet; Manage</div>
-    </header>
+            <div class="tags">Write &bullet; Speak &bullet; Teach &bullet; Develop &bullet; Manage</div>
+        </header>
+    </div>
 
     <script src="./auto-bind-events.js"></script>
     <script src="./index.js"></script>

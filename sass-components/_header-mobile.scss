@@ -47,6 +47,7 @@ header {
         img {
             margin-left: -16px;
             cursor: pointer;
+            background-color: red;
         }
           
         input {
@@ -61,12 +62,12 @@ header {
     .links {
         grid-area: links;
         margin-top: .5em;
-        background-color: darken($secondary-bg-color, 20%);
+        background-color: $secondary-dark-bg-color;
         justify-self: stretch;
         overflow: hidden;
         transition: height 500ms ease;
         height: 0;
-        color: lighten(black, 20%);
+        color: $text-primary-color;
 
         .inner-container {
             padding-top: 1em;

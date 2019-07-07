@@ -1,4 +1,10 @@
 
+div.header-wrapper {
+    background-color: $secondary-bg-color;
+    display: flex;
+    justify-content: center;
+}
+
 header {
     background-color: $secondary-bg-color;
     display: grid;
