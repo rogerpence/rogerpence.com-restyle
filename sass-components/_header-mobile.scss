@@ -1,3 +1,6 @@
+body {
+    border-top: 6px solid $primary-bg-color;
+}
 
 header {
     background-color: $secondary-bg-color;
@@ -46,16 +49,20 @@ header {
 
         img {
             margin-left: -16px;
+            margin-top: 4px;
             cursor: pointer;
-            background-color: red;
-        }
-          
+        }          
+
         input {
             font-size: 140%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            height: 1.5em;
+            border: transparent;
         }
 
         input:focus {
-            font-size: 160%;
+            font-size: 150%;
         }          
     }    
 

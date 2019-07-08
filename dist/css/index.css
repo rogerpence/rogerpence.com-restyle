@@ -289,6 +289,14 @@ body {
   background-color: #514b5b;
 }
 
+.content {
+  border: 2px solid red;
+}
+
+body {
+  border-top: 6px solid #514b5b;
+}
+
 header {
   background-color: #c4c4c4;
   display: -ms-grid;
@@ -337,16 +345,20 @@ header .search-container {
 
 header .search-container img {
   margin-left: -16px;
+  margin-top: 4px;
   cursor: pointer;
-  background-color: red;
 }
 
 header .search-container input {
   font-size: 140%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 1.5em;
+  border: transparent;
 }
 
 header .search-container input:focus {
-  font-size: 160%;
+  font-size: 150%;
 }
 
 header .links {
@@ -533,7 +545,6 @@ header .avatar {
   }
   header .search-container input {
     font-size: 140%;
-    border-radius: 10% 0 0 10%;
   }
   header .search-container input:focus {
     font-size: 160%;
@@ -712,7 +723,6 @@ header .avatar {
   }
   header .search-container input {
     font-size: 140%;
-    border-radius: 10% 0 0 10%;
   }
   header .search-container input:focus {
     font-size: 160%;
