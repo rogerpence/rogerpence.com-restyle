@@ -2,6 +2,23 @@ body {
     border-top: 6px solid $primary-bg-color;
 }
 
+.blog-title {
+    grid-area: title;
+}
+
+.search-container {
+    grid-area: search;
+}
+
+.tags {
+    grid-area: tags 
+}
+
+.avatar {
+    grid-area: avatar;
+    display: none;
+}
+
 header {
     background-color: $secondary-bg-color;
     display: grid;

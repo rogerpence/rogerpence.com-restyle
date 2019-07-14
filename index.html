@@ -8,63 +8,120 @@
     <link rel="stylesheet" href="./dist/css/index.css">
 </head>
 <body>
+        <div class="header-wrapper green-o-s">
+            <header class="container">
+                <div class="hamburger-container" title="Show navigation">
+                        <a href="#" data-events="click" 
+                                    data-handlers="toggleNavMenu">
+                            <div class="hamburger hamburger--slider">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-    <div class="header-wrapper green-o-s">
-        <header class="container">
-            <div class="hamburger-container" title="Show navigation">
-                <a href="#" data-events="click" 
-                            data-handlers="toggleNavMenu">
-                    <div class="hamburger hamburger--slider">
-                        <div class="hamburger-box">
-                            <div class="hamburger-inner"></div>
+                    <div class="avatar">
+                        <img class="round-full" 
+                            title="Roger Pence"
+                            width="80"
+                            src="https://rogerpence.com/storage/images/rp-small.2458154.32926.png?1" alt="Roger Pence">
+                    </div>
+                    
+                    <div class="links">
+                        <div class="inner-container">
+                            <div>
+                                <a class="" href="/about">
+                                    <img class="icon-s" src="/images/address-card-regular.svg" alt="">&nbsp;About</a>
+                                <a class="" href="/contact">
+                                    <img class="icon-m" src="/images/handshake-alt-regular.svg" alt="">&nbsp;Contact</a>
+                                <a class="" href="/links">
+                                    <img class="icon-xs" src="/images/link-regular.svg" alt="">&nbsp;Links</a>
+                                <a class="" href="/snippets">
+                                    <img class="icon-s" src="/images/code-regular.svg" alt="">&nbsp;Snippets</a>
+                                <a class="" href="/">
+                                    <img class="icon-s" src="/images/sign-in-solid.svg" alt="">&nbsp;Login</a>
+                            </div>
                         </div>
                     </div>
-                </a>
-            </div>
+                    
+                    <div class="blog-title">rogerpence.com</div>
 
-            <div class="avatar">
-                <img class="round-full" 
-                     title="Roger Pence"
-                     width="80"
-                     src="https://rogerpence.com/storage/images/rp-small.2458154.32926.png?1" alt="Roger Pence">
-            </div>
-            
-            <div class="links">
-                <div class="inner-container">
-                    <div>
-                        <a class="" href="/about">
-                            <img class="icon-s" src="/images/address-card-regular.svg" alt="">&nbsp;About</a>
-                        <a class="" href="/contact">
-                            <img class="icon-m" src="/images/handshake-alt-regular.svg" alt="">&nbsp;Contact</a>
-                        <a class="" href="/links">
-                            <img class="icon-xs" src="/images/link-regular.svg" alt="">&nbsp;Links</a>
-                        <a class="" href="/snippets">
-                            <img class="icon-s" src="/images/code-regular.svg" alt="">&nbsp;Snippets</a>
-                        <a class="" href="/">
-                            <img class="icon-s" src="/images/sign-in-solid.svg" alt="">&nbsp;Login</a>
+                    <div class="search-container">
+                        <input id="search-input" type="text">
+                        <a href="#"
+                        data-events="click"
+                        data-handlers="performSearch">
+                            <img id="mag-glass" width="40px" height="40px"
+                                src="https://www.rogerpence.com/storage/images/Frame.2458646.78279.png" alt="">
+                        </a>                
                     </div>
-                </div>
-            </div>
+
+                    <div class="tags">Write &bullet; Speak &bullet; Teach &bullet; Develop &bullet; Manage</div>
+            </header>
+        </div>
+        <div class="page">
+            <aside>
+                Aside
+            </aside>
+            <main>
+                <div class="articles-preview-container">
+
+                    <div class="article-preview">
+                        <div class="banner-new">
+                            <img src="https://rogerpence.com/storage/images/ribbon72.2458624.53028.png" alt="">
+                        </div>
             
-            <div class="blog-title">rogerpence.com</div>
+                        <a class="headline" href="/posts/how-to-customize-ubuntu&#039;s-terminal-tab-titles">
+                            <h3>Don't use CSS's default box-sizing value</h3>
+                        </a>
+            
+                        <div class="subhead">Making this one little CSS change saves hours of frustration</div>
+            
+                        <div class="date-and-byline">
+                            2018-12-09 by rp
+                        </div>
+            
+                        <div class="tags-read-more-container">
+                            <div class="tags-container">
+                                <span class="tag">
+                                    <a class="" href="/posts/tags/ubuntu">
+                                        ubuntu
+                                    </a>
+                                </span>
+                                <span class="tag">
+                                    <a class="" href="/posts/tags/terminal">
+                                        terminal
+                                    </a>
+                                </span>
+                                <span class="tag">
+                                    <a class="" href="/posts/tags/zsh">
+                                        zsh
+                                    </a>
+                                </span>
+                            </div>
 
-            <div class="search-container">
-                <input id="search-input" type="text">
-                <a href="#"
-                data-events="click"
-                data-handlers="performSearch">
-                    <img id="mag-glass" width="40px" height="40px"
-                        src="https://www.rogerpence.com/storage/images/Frame.2458646.78279.png" alt="">
-                </a>                
-            </div>
+                            <div class="read-more">
+                                <a href="#" class="">
+                                    <svg class="read-more-icon" width="" height="32px" aria-hidden="true" focusable="false" data-prefix="far"
+                                        data-icon="long-arrow-alt-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path
+                                            d="M340.485 366l99.03-99.029c4.686-4.686 4.686-12.284 0-16.971l-99.03-99.029c-7.56-7.56-20.485-2.206-20.485 8.485v71.03H12c-6.627
+                                                0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h308v71.03c0 10.689 12.926 16.043 20.485 8.484z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- End article-preview -->
+                </div>
 
-            <div class="tags">Write &bullet; Speak &bullet; Teach &bullet; Develop &bullet; Manage</div>
-        </header>
 
-    </div>
-    <div class="content">
-        this is content
-    </div>
+
+            </main>
+            <footer>
+                Footer
+            </footer>
+        </div>
     
     <script src="./auto-bind-events.js"></script>
     <script src="./index.js"></script>

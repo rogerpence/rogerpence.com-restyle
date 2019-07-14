@@ -7,40 +7,54 @@
 @import 'sass-components/general-mixins';
 @import 'sass-components/hamburger';
 
-
 * {
     font-family: 'Roboto', sans-serif;
 }
 
 // Application parts
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: $primary-bg-color;
+    min-height: 100%;
 }
 
 .content {
     border: 2px solid red;
 }
 
-
 @import 'sass-components/header-mobile';
+@import 'sass-components/main-page';
+@import 'sass-components/article';
 
-.blog-title {
-    grid-area: title;
-}
+// div.page {
+//     display: grid;
+//     width: 100vw;
+//     // min-height: 100%;
+//     grid-template-areas: "main"
+//                          "aside" 
+//                          "foot";
+//     grid-template-rows: 1fr 1fr auto;
+//     //grid-template-columns: auto;   
+// }
 
-.search-container {
-    grid-area: search;
-}
+// aside {
+//     grid-area: aside;
+//     background-color: red;
+// }
 
-.tags {
-    grid-area: tags 
-}
+// main {
+//     grid-area: main;
+//     background-color: blue;
+// }
 
-.avatar {
-    grid-area: avatar;
-    display: none;
-}
+// footer {
+//     grid-area: foot;
+//     background-color: green;
+// }
 
 // 768 or more.
 @media only screen and (min-width: 768px) {

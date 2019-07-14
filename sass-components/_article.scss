@@ -1,0 +1,71 @@
+div.page main {
+    padding: 1rem;
+}
+
+.articles-preview-container {
+}
+
+.article-preview {
+    background-color: $primary-bg-color-lighter;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    position: relative;
+    
+    .banner-new {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .headline {
+        color: $secondary-bg-color;
+        text-decoration: none;
+        font-size: inherit;
+
+        h3 {
+            font-size: 1.4em;    
+        }
+    }
+
+    .subhead {
+        color: $secondary-bg-color;
+        font-size: 1.1em;
+        padding-top: .5em;    
+    }
+
+    .date-and-byline {
+        color: $secondary-bg-color;
+        font-size: 1em;
+        padding-top: 1.5em;
+    }
+
+    .tags-read-more-container {
+        display: flex;
+        align-items: center;
+        margin-top: 1em;
+
+        .tags-container {
+            flex: 1 1 auto;
+
+            .tag {                
+                background-color: $secondary-bg-color;
+                padding: .2em 1em .2em 1em;
+                border-radius: 1.5em;
+                margin-right: .5em;
+                
+                a {
+                    text-decoration: none;
+                    color: $text-primary-color;
+                }
+            }
+        }
+
+        .read-more {
+            .read-more-icon path {
+                fill: $secondary-bg-color;
+            }
+        }
+
+    }
+}

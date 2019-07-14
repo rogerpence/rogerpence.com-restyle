@@ -1,4 +1,8 @@
 $primary-bg-color: #514b5b;
+$primary-bg-color-lighter: lighten($primary-bg-color, 10%); 
+$primary-bg-color-darker: darken($primary-bg-color, 20%); 
+
 $secondary-bg-color: #c4c4c4;
 $secondary-dark-bg-color:  darken($secondary-bg-color, 20%);        
+
 $text-primary-color: lighten(black, 20%);
