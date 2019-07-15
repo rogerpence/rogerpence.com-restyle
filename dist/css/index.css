@@ -601,7 +601,8 @@ div.page main {
   background-color: #c4c4c4;
   padding: .2em 1em .2em 1em;
   border-radius: 1.5em;
-  margin-right: .5em;
+  margin-right: .3em;
+  display: inline-block;
 }
 
 .article-preview .tags-read-more-container .tags-container .tag a {
